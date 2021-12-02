@@ -1,0 +1,125 @@
+@media screen and (min-width: 360px) {
+    #hamnav {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        border: solid;
+        width: 100%;
+        justify-content: space-evenly;
+        background-color: #18cabb;
+    }
+    .logo {
+        display: grid;
+        margin: auto;
+        color: #4a4c4e;
+    }
+    .btn {
+        background-color: #4a4c4e;
+        color: white;
+        float: right;
+    }
+    .search-bar {
+        display: flex;
+        flex-direction: row;
+    }
+    .btn:hover {
+        background-color: #2168ec;
+    }
+    #toggle-button {
+        position: relative;
+        padding: 26px 11px;
+        z-index: 5;
+        cursor: pointer;
+        user-select: none;
+    }
+    #toggle-button span {
+        height: 4px;
+        width: 35px;
+        border-radius: 2px;
+        background-color: gray;
+        position: relative;
+        display: block;
+        transition: all 0.2s ease;
+    }
+    #toggle-button span:before {
+        top: -10px;
+        visibility: visible;
+    }
+    #toggle-button span:after {
+        top: 10px;
+    }
+    #toggle-button span:before,
+    #toggle-button span:after {
+        height: 4px;
+        width: 35px;
+        border-radius: 2px;
+        background-color: gray;
+        position: absolute;
+        content: "";
+        transition: all 0.2s ease-in-out;
+    }
+    #toggle-button:hover span,
+    #toggle-button:hover span:before,
+    #toggle-button:hover span:after {
+        background: #333332;
+    }
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]:checked~#main-nav {
+    visibility: visible;
+}
+
+input[type=checkbox]:checked~#toggle-button:hover span,
+input[type=checkbox]:checked~#toggle-button span {
+    background: transparent;
+}
+
+input[type=checkbox]:checked~#toggle-button span:before {
+    transform: rotate(45deg) translate(7px, 7px);
+    opacity: 1;
+}
+
+input[type=checkbox]:checked~#toggle-button span:after {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+#main-nav {
+    height: 100vh;
+    width: 100vw;
+    background: #ec6451;
+    z-index: 2;
+    visibility: hidden;
+    position: fixed;
+}
+
+#main-nav.active {
+    visibility: visible;
+}
+
+#main-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+#main-nav ul li {
+    padding: 1em;
+}
+
+#main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+#main-nav ul li a:hover {
+    color: #333332;
+}

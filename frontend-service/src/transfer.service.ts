@@ -1,7 +1,7 @@
 import {ACCOUNT_FILTERS} from "./account.filters";
 import {Transfer} from './transfer.model';
 
-const url="http://localhost:8080/users/1/accounts"
+const url="http://localhost:8080/users/1/accounts/1/transactions"
 
 
 class TransferService {
@@ -14,7 +14,7 @@ transferMoney(number:number){
 }
 getTransactions(filter:any){
 
-    return fetch(url, { method: 'GET' })
+    return fetch(url, { method:'GET' })
         .then(response => response.json());
 
 }

@@ -6,12 +6,11 @@ import com.revature.entity.TransactionType;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+import javax.persistence.Query;
 import java.util.Date;
+import java.util.List;
 
 public class JpaTransferRepository implements TransferRepository {
-    private double balance;
 
     private EntityManagerFactory entityManagerFactory;
 
@@ -57,15 +56,41 @@ public class JpaTransferRepository implements TransferRepository {
         entityManager.getTransaction().begin();
 
         entityManager.find(Transaction.class,account.getNumber());
-        System.out.println(transaction.id);
-        System.out.println(transaction.amount);
-        System.out.println(transaction.account_number.getNumber());
-
         entityManager.getTransaction().commit();
         entityManager.close();
         entityManagerFactory.close();
 
 
 
+    }
+
+    @Override
+    public Transaction getTransaction(int id) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+
+
+        Transaction transaction = entityManager.find(Transaction.class, id);
+
+        entityManager.getTransaction().commit();
+        entityManager.close();
+        return transaction;
+    }
+
+
+
+    @Override
+    public List<Transaction> findAllTransactions(String filter) {
+        EntityManager entityManager=entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+
+        String jpql="from Transaction WHERE account_number= " + 1;
+
+
+        Query query=entityManager.createQuery(jpql);
+        List<Transaction> transactions=query.getResultList();
+        entityManager.getTransaction().commit();
+        entityManager.close();
+        return transactions;
     }
 }

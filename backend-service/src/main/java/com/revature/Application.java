@@ -21,6 +21,8 @@ public class Application {
         app.get("/users/{usersId}/accounts/{number}", AccountController.getAccount);
         app.post("/users/{userId}/accounts/{number}",AccountController.updateAccount);
         app.delete("/users/{userId}/accounts/{number}", AccountController.deleteAccount);
+        app.get("/users/{userId}/accounts/{number}/transactions", TransferController.getAllTransactions);
+        app.get("/users/{userId}/accounts/{number}/transactions/{id}", TransferController.getTransaction);
         app.post("/users/{userId}/accounts/{number}/transactions",TransferController.TransferMoney);
 
 

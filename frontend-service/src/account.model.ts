@@ -7,6 +7,7 @@ constructor(number: string,balance:number){
     this.number="1";
     this.balance=balance;
     
+    
 }
 }
 export {Account}

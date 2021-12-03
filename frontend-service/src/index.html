@@ -36,31 +36,33 @@
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
-
-            </div>
         </nav>
     </header>
 
     <hr />
     <h2>Account web-ui</h2>
     <hr />
-    <div class="container" id="transfer-service">
-        <div class="alert alert-info">
-            <input class="form-control-lg" id="transfer">Account Number</input>
-            <input class="form-control-lg">Transfer Amount</input>
-            <button class="btn btn-outline-success" type="submit">Submit</button>
-        </div>
-        <select class="custom-select custom-select-sm">
+    <form>
+        <div class="container" id="transfer-service">
+            <div class="alert alert-info">
+                <input class="form-control-lg" id="transfer">Account Number
+                <input class="form-control-lg">Transfer Amount
+                <button class="btn btn-outline-success" type="submit" data-action='submit' data-id="transfer.account_number">Submit</button>
+            </div>
+            <div class="container">
+                <select class="custom-select custom-select-sm">
             <option selected> menu</option>
-            <option value="1">Daily Transactions</option>
-            <option value="2">Monthly Transactions</option>
-            <option value="3">Quarterly Transactions</option>
+            <option value="1">Monthly Transactions</option>
+            <option value="2">Quarterly Transactions</option>
           </select>
-        <div>
-            <ul id="account-list">
-            </ul>
+            </div>
         </div>
+    </form>
+    <div>
+        <ul id="account-list">
+        </ul>
     </div>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>

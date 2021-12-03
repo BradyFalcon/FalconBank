@@ -7,14 +7,14 @@ const url="http://localhost:8080/users/1/accounts"
 class TransferService {
 transactions: Array<Transfer>=[]
 
-transferMoney(id:number){
-    return fetch(`${url}/${id}`,{
+transferMoney(number:number){
+    return fetch(`${url}/${number}`,{
         method:'POST',
     }).then((response)=>response.json());
 }
-getTransactions(){
+getTransactions(filter:any){
 
-    return fetch(`${url}`, { method: 'GET' })
+    return fetch(url, { method: 'GET' })
         .then(response => response.json());
 
 }

@@ -12,6 +12,7 @@ const transferService=new TransferService()
 const transferServ=document.getElementById('transfer-service')
 const transferList=document.getElementById('transfer-list')
 const accountListEle=document.getElementById("account-list")
+const transferDates=document.getElementById("transfer-dates")
 
 transferServ.addEventListener('click', e=>{
     e.preventDefault();
@@ -21,20 +22,35 @@ transferServ.addEventListener('click', e=>{
 
     if(action==='submit')
     { const id=dataset['id']
-    transferService.transferMoney(Number.parseInt(id))
+    const number="1";
+    accountService.getAccount(number)
         .then(response=>{
+            transferService.transferMoney(Number.parseInt(id))
             renderAccount()
         
         })
 
     }
 })
+    
+transferDates.addEventListener('click',e=>{
+    e.stopPropagation();
+
+    const dataset = (<HTMLInputElement>e.target).dataset;
+    const action = dataset['action']
+
+    if(action==="1"){
+        
+    }
+    if(action==="2"){}
+
+})
 
 async function renderAccount(){
     const number="1";
 
     const account=await accountService.getAccount(number)
-    const transfer=await transferService.getTransactions(Transfer)
+    const transfer=await transferService.getTransactions(Transfer.nextId)
 
     const accountListElements=account.transactions.map((transaction: any)=>{
         return `
@@ -50,13 +66,16 @@ async function renderAccount(){
 }renderAccount();
 
 //-------------------------------------------------------
-async function displayTransactionByDate(filter='TRANSACTION'){
+
+
+
+
+
+
+
+
 
     
-transferList.addEventListener('options',e=>{
-    e.stopImmediatePropagation
 
-    
 
-})
-}
+

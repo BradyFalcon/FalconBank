@@ -22,8 +22,8 @@ public class AccountController {
     static AccountRepository accountRepository=new JpaAccountRepository(entityManagerFactory);
 
     public static Handler saveAccount=ctx->{
-        String userId=ctx.pathParam("userId");
-        System.out.println(userId);;
+        String number=ctx.pathParam("number");
+        accountRepository.getAccount(number);
         Account account=ctx.bodyAsClass(Account.class);
         accountRepository.saveAccount(account);
         ctx.status(HttpStatus.CREATED_201);
@@ -52,7 +52,7 @@ public class AccountController {
     };
     public static Handler updateAccount=ctx->{
         String number=ctx.pathParam("number");
-      System.out.println(number);
+      accountRepository.getAccount(number);
       Account account=ctx.bodyAsClass(Account.class);
       accountRepository.updateAccount(account);
       ctx.status(HttpStatus.OK_200);

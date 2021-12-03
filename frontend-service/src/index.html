@@ -49,11 +49,11 @@
                 <input class="form-control-lg">Transfer Amount
                 <button class="btn btn-outline-success" type="submit" data-action='submit' data-id="transfer.account_number">Submit</button>
             </div>
-            <div class="container">
+            <div class="container" id="transfer-dates">
                 <select class="custom-select custom-select-sm">
             <option selected> menu</option>
-            <option value="1">Monthly Transactions</option>
-            <option value="2">Quarterly Transactions</option>
+            <option data-action="1" data-id="transfer-id">Monthly Transactions</option>
+            <option data-action="2" data-id="transfer.id">Quarterly Transactions</option>
           </select>
             </div>
         </div>

@@ -7,6 +7,7 @@ Technologies Used
 "sass": "1.43.4",
 "java": "17"
 "hibernate": "5.6.1"
+NodeJS
        
 
 Features:
@@ -20,6 +21,12 @@ To-do list:
 -Add Log4j
 -Front-end needs EventListener to display dates of transaction
 Getting Started
+First open up your cmd line. 
+Then type in git clone 
+After cloning repository, I used Visual Studio to run my frontend service.
+To do this, open up the folder you have the application saved into, after opening the terminal inside Visual studio you have to change directory. Use the command in
+the visual studio terminal: cd front-end service/src.
+When you are in the src folder in the terminal use the command npm install. This will install all the files you need for 
 (include git clone command) (include all environment setup steps)
 
 Be sure to include BOTH Windows and Unix command

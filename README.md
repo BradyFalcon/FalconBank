@@ -44,9 +44,12 @@ To run the backend I used the IntelliJ IDE, to use this IDE all you have to do i
 the application. After the application is built, you want to press Run. If done correctly the backend should be up and running. Also, if you don't know how to set up
 tables in MySql I have included the command to AutoCreate your database and the tables. All you have to do is uncomment it, and then run the program.
 
-
-
 Usage:
 To view the application up and running, just go to your web browser and type in LocalHost:3000. This will take you to the webpage outlook.
 
+
+![Screenshot 2021-12-16 ](https://user-images.githubusercontent.com/92339170/146473370-b573d1ce-93e1-457d-adcd-03ad89bae1b5.png)
+![Screenshot 2021-12-16 Display](https://user-images.githubusercontent.com/92339170/146473455-02a7b762-1f0b-437b-9983-ac79d8d1b39e.png)
+![Screenshot 2021-12-16 intellij](https://user-images.githubusercontent.com/92339170/146473457-76923d55-4264-418e-8232-3a972083c4ac.png)
+![Screenshot 2021-12-16 javalin](https://user-images.githubusercontent.com/92339170/146473458-d7c1992e-d89d-4b75-b196-f07b9e8b8bbe.png)
 

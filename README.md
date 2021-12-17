@@ -2,12 +2,14 @@ FALCON BANK
 Money Transfer Service
 The main goal of this project is to build a money transfer service. It should be able to view transactions, and make transactions.
 
-Technologies Used
+Technologies Used:
 "typescript": "4.5.2",
 "sass": "1.43.4",
 "java": "17",
 "hibernate": "5.6.1",
 NodeJS,
+Visual Studio,
+IntelliJ IDE,
 MySQL
        
 

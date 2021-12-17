@@ -26,7 +26,7 @@ To-do list:
 -Write typescript code to be able to run transactions.
 
 
-Getting Started
+Getting Started:
 First open up your cmd line. 
 Then choose a folder you want to store the file into. Type in cd "filename"
 Install nodejs, to do this on Linux system type in sudo apt install nodejs.
@@ -44,7 +44,7 @@ tables in MySql I have included the command to AutoCreate your database and the 
 
 
 
-Usage
+Usage:
 To view the application up and running, just go to your web browser and type in LocalHost:3000. This will take you to the webpage outlook.
 
 
